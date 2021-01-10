@@ -8,7 +8,7 @@ There are two ways to setup a PowerPoint presentation with this program: Use the
 
 #### Using the Included PowerPoint Presentation
 1. Open the `Jeopardy Macro Template.pptm` included in this repository and accept all dialogs warning you about macros (this is required, but proceed at your own risk).
-2. Add the Developer tab to the Ribbon using these instructions: https://www.howtogeek.com/400301/how-to-add-the-developer-tab-to-the-ribbon/ (they are for Word but should still work).
+2. Add the developer tab to the ribbon, if you don't already have it, using [these](https://www.howtogeek.com/400301/how-to-add-the-developer-tab-to-the-ribbon/) instructions (they are for Word but should still work).
 3. In the Developer tab click on the `Macros` button and the macro in the popup called "GetSlideNumber." Click "Edit."
 4. In the new window that appears, locate the third line of the inner window.
 5. Replace "C:\MyFileDirectory" in "C:\MyFileDirectory\SlideNotes.txt" with the directory that contains the Python scorer program. If you want to use a different directory/filename you will need to edit the Python scorer script.
@@ -18,7 +18,7 @@ There are two ways to setup a PowerPoint presentation with this program: Use the
 
 #####
 1. Create a new presentation in PowerPoint and save it as a PowerPoint Macro-Enabled Presentation (.pptm).
-2. Add the developer tab to the ribbon if you don't already have it using these instructions: https://www.howtogeek.com/400301/how-to-add-the-developer-tab-to-the-ribbon/ (they are for Word but should still work).
+2. Add the developer tab to the ribbon, if you don't already have it, using [these](https://www.howtogeek.com/400301/how-to-add-the-developer-tab-to-the-ribbon/) instructions (they are for Word but should still work).
 3. In the Developer tab click on the `Macros` button and type a name for the macro (eg. "GetSlideNumber"). Click Create.
 4. In the inner window of the new window paste in the code below between `Sub *yourMacroName*()` and `End Sub`
     ```
@@ -36,3 +36,7 @@ There are two ways to setup a PowerPoint presentation with this program: Use the
 
 ##### Presenting with PowerPoint and Jeopardy Scorer
 Start the presentation in PowerPoint and run `main.py` from the repository. Once you have entered the players, you will see two fields related to the PowerPoint presentation: "Current Question" and "Question Value." When you get to a question slide in your presentation click near one of the corners of the slide (or wherever you put your shape if you made the presentation manually) and you will see the fields in the scorer update. The add and subtract buttons in the scorer will add or subtract the amount in question value. You can change the question values in the `board.json` if you want.
+
+## Credits
+- PySimpleGUI
+- Original version of the PowerPoint presentation: https://slidelizard.com/en/blog/jeopardy-powerpoint-template
