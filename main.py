@@ -56,9 +56,9 @@ def start_scorer_windows():
                               Sg.Radio("", group_id="player_{}".format(i + 1), key="player_{}_subtract".format(i + 1)),
                               Sg.Radio("", default=True, group_id="player_{}".format(i + 1),
                                        key="player_{}_other".format(i + 1)),
-                              Sg.Input(key="player_{}_input".format(i + 1))])
+                              Sg.Input(key="player_{}_input".format(i + 1), size=(6, 1))])
     scorer_layout.extend(
-        [[Sg.Text("Save to File:"), Sg.Input(key="filename"), Sg.FileSaveAs(file_types=(("Text Document","*.txt"),("all files","*.*")))],
+        [[Sg.Text("Save to File:"), Sg.Input(key="filename", size=(18, 1)), Sg.FileSaveAs(file_types=(("Text Document","*.txt"),("all files","*.*")))],
          [Sg.Check("Keep client window on top", key="keep_on_top")],
          [Sg.Button("Update", key="update", bind_return_key=True), Sg.Button("Start Client", key="client_start"),
           Sg.Button("Save To File", key="save_to_file")]])
